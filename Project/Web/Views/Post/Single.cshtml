@@ -1,0 +1,9 @@
+﻿@model Web.ViewModels.SinglePostViewModel
+@{ 
+    ViewData["Title"] = "Post: " + @Model.Name;
+}
+<div class="container">
+   @Html.ActionLink("Back", "Index", "Post", null, new { @class = "btn btn-primary float-right mb-2" })
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+</div>

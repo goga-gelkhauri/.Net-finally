@@ -1,0 +1,12 @@
+E:\c#\project\Project\ApplicationCore\bin\Debug\net5.0\ApplicationCore.deps.json
+E:\c#\project\Project\ApplicationCore\bin\Debug\net5.0\ApplicationCore.dll
+E:\c#\project\Project\ApplicationCore\bin\Debug\net5.0\ref\ApplicationCore.dll
+E:\c#\project\Project\ApplicationCore\bin\Debug\net5.0\ApplicationCore.pdb
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csprojAssemblyReference.cache
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfoInputs.cache
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfo.cs
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.CoreCompileInputs.cache
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.dll
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ref\ApplicationCore.dll
+E:\c#\project\Project\ApplicationCore\obj\Debug\net5.0\ApplicationCore.pdb

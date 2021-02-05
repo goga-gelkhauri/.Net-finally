@@ -1,0 +1,59 @@
+﻿@model Web.ViewModels.PostsViewModel
+@{ 
+    ViewData["Title"] = "Posts";
+}
+
+<table class="table table-dark">
+    @Html.ActionLink("Create new post", "create", "Post", null, new { @class = "btn btn-success float-right mb-2" })
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model.Posts)
+        {
+            <tr>
+                <td>@post.Name</td>
+                <td>@post.Description</td>
+                <td>
+                    @Html.ActionLink("View", "Single", "Post", new { Id = post.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Edit", "Edit", "Post", new { Id = post.Id }, new { @class = "btn btn-warning" })
+                    <div>
+                        <form method="post" asp-controller="Post" asp-action="Delete">
+                            <input type="hidden" name="id" value="@post.Id" />
+                            @Html.AntiForgeryToken()
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger mt-2" data-toggle="modal" data-target="#exampleModal">
+                                Delete
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade text-dark" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body ">
+                                            are you shure to want delete
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

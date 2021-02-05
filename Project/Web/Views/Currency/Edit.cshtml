@@ -1,0 +1,25 @@
+﻿@model Web.ViewModels.EditCurrencyViewModel
+@{ 
+    ViewData["Title"] = "Edit Currency";
+}
+
+<div class="container">
+    @Html.ActionLink("Back", "Index", "Currency", null, new { @class = "btn btn-primary float-right mb-2" })
+    <form method="post" asp-controller="Currency" asp-action="Update">
+        @Html.AntiForgeryToken()
+        @Html.TextBoxFor(m => m.Currency.Id, new { type = "hidden" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Currency.Name)
+            @Html.TextBoxFor(m => m.Currency.Name, new { placeholder = "Enter Title", @class = "form-control" })
+            <span asp-validation-for="Currency.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Currency.Value, "Value")
+            @Html.TextBoxFor(m => m.Currency.Value, new { placeholder = "Enter Value", @class = "form-control" })
+            <span asp-validation-for="Currency.Value" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
